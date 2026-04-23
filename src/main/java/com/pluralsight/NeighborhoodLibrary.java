@@ -69,6 +69,7 @@ public class NeighborhoodLibrary {
         } else {
             System.out.println("Enter your name: ");
             String name = scanner.next().trim();
+            /* not allowing me to put full name?? */
 
             for(int j = 0; j < 20; j++) {
                 if(books[j].getId() == Integer.parseInt(choice)) {
