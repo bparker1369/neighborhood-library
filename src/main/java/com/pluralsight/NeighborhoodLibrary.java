@@ -40,7 +40,7 @@ public class NeighborhoodLibrary {
             System.out.println("2. Show Checked Out Books");
             System.out.println("3. Exit");
 
-            int choice = scanner.nextInt();
+            int choice = Integer.parseInt(scanner.next().trim());
 
             if(choice == 1) {
                 showAvailableBooks(scanner);
@@ -62,13 +62,13 @@ public class NeighborhoodLibrary {
         System.out.println("Enter Book ID you would like to check out");
         System.out.println("Enter B to exit to main menu");
 
-        String choice = scanner.nextLine();
+        String choice = scanner.next().trim();
 
         if(choice.equalsIgnoreCase("B")) {
             return;
         } else {
-            System.out.print("Enter your name: ");
-            String name = scanner.next();
+            System.out.println("Enter your name: ");
+            String name = scanner.next().trim();
 
             for(int j = 0; j < 20; j++) {
                 if(books[j].getId() == Integer.parseInt(choice)) {
@@ -89,7 +89,7 @@ public class NeighborhoodLibrary {
         System.out.println("Enter C to check in a book");
         System.out.println("Enter X to return to main menu");
 
-        String choice = scanner.nextLine();
+        String choice = scanner.next().trim();
 
         if(choice.equalsIgnoreCase("C")) {
             System.out.println("Enter book ID you would like to check in:");
